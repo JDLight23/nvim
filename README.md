@@ -7,3 +7,8 @@ git clone https://github.com/JDLight23/nvim.git
 ```
 
 ### Setup
+On Mac, run:
+
+```
+./setup-mac.sh
+```
