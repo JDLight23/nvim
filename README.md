@@ -11,11 +11,11 @@ git clone https://github.com/JDLight23/nvim.git
 On Mac, run:
 
 ```
-./setup-mac.sh
+./scripts/setup-mac.sh
 ```
 On Ubuntu Linux distributions, run:
 ```
-./setup-linux.sh
+./scripts/setup-linux.sh
 ```
 
 ##### Troubleshooting
