@@ -40,6 +40,20 @@ return {
                     vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
                 end,
             })
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = "qf",
+                callback = function(ev)
+                    local opts = { buffer = ev.buf, silent = true }
+                    -- jump to entry, then close the list
+                    vim.keymap.set("n", "<CR>", "<CR><cmd>cclose<CR>", opts)
+                    -- peek: jump to entry but keep focus in the quickfix window
+                    vim.keymap.set("n", "p", function()
+                        local qf_win = vim.api.nvim_get_current_win()
+                        vim.cmd("normal! \r")
+                        vim.api.nvim_set_current_win(qf_win)
+                    end, opts)
+                end,
+            })
         end,
     },
 }
