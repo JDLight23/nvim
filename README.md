@@ -37,4 +37,4 @@ opening a fresh terminal, your shell could be caching the binary path to the
 old version
 
 
-See [cheatsheet.txt](./cheatsheet.md) for a list of plugin shortcuts.
+See [cheatsheet](./cheatsheet.md) for a list of plugin shortcuts.
