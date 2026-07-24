@@ -9,6 +9,8 @@ LSP:
 	gd - go to definition
 	gi - go to implementation
 	gr - find references, list every place in project symbol used
+        Note: can hit 'p' (as in peak) when hovering over reference in popup
+        to go to line in file without exiting popup
 	<leader>rn - rename every reference to selected symbol
 	<leader>ca - "code action," offers fix for error
 	K - hover docs, shows docstring/type signature
