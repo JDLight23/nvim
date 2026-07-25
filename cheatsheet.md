@@ -10,6 +10,8 @@
 - `<leader>rn` - rename every reference to selected symbol
 - `<leader>ca` - "code action," offers fix for error
 - `K` - hover docs, shows docstring/type signature
+- `]d` / `[d` - jump to next/previous diagnostic
+- `<leader>e` - press when hovering over diagnostic to view message
 
 ### Telescope
 - `<leader>ff` - find file in project
