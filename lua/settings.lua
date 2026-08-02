@@ -58,3 +58,11 @@ vim.o.winborder = "single"
 -- Auto-reload files changed outside of neovim
 vim.opt.autoread = true
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, { command = "checktime" })
+
+-- Treat Jenkinsfile* (e.g. Jenkinsfile.build, Jenkinsfile.deploy) as groovy;
+-- builtin detection only matches the exact name "Jenkinsfile"
+vim.filetype.add({
+    pattern = {
+        ["Jenkinsfile.*"] = "groovy",
+    },
+})

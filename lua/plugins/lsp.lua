@@ -5,7 +5,7 @@ return {
             require("mason").setup()
             local mr = require("mason-registry")
             mr.refresh(function()
-                for _, pkg_name in ipairs({ "clangd", "pyright", "robotframework-lsp" }) do
+                for _, pkg_name in ipairs({ "clangd", "pyright", "robotframework-lsp", "groovy-language-server" }) do
                     local ok, pkg = pcall(mr.get_package, pkg_name)
                     if ok and not pkg:is_installed() then
                         pkg:install()
@@ -25,7 +25,7 @@ return {
                 capabilities = require("blink.cmp").get_lsp_capabilities(),
             })
 
-            vim.lsp.enable({ "clangd", "pyright", "robotframework_ls" })
+            vim.lsp.enable({ "clangd", "pyright", "robotframework_ls", "groovyls" })
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 callback = function(ev)
