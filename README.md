@@ -8,7 +8,7 @@ git clone https://github.com/JDLight23/nvim.git
 ```
 
 ## Plugins
-Currently includes:
+Plugins managed by [Lazy](https://github.com/folke/lazy.nvim), use command `:Lazy` in Neovim to open UI. This config currently includes:
 - LSP servers managed by [Mason](https://github.com/williamboman/mason.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
@@ -28,11 +28,11 @@ On Ubuntu Linux distributions, run:
 ```
 
 #### Troubleshooting
-If an LSP isn't working after setup, open `:Mason` and check that all servers
+- If an LSP isn't working after setup, open `:Mason` and check that all servers
 show as installed. If `pyright` failed, it likely means npm wasn't
 available yet when Mason first tried — run `:MasonInstall pyright` to retry.
 
-If setup script doesn't like Neovim version even after updating to 0.12+, try
+- If setup script doesn't like Neovim version even after updating to 0.12+, try
 opening a fresh terminal, your shell could be caching the binary path to the
 old version
 
