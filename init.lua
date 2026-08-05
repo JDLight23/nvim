@@ -1,3 +1,8 @@
+-- Must be set before requiring settings/lazy, since leader-key mappings
+-- in those files are resolved at registration time.
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 require("settings")
 require("config.lazy")
 

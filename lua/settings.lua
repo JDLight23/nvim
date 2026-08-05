@@ -2,6 +2,10 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Highlight only the line number of the current line (not the whole row)
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
+
 -- Tabs and indentation
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -66,3 +70,11 @@ vim.filetype.add({
         ["Jenkinsfile.*"] = "groovy",
     },
 })
+
+-- Jump back/forward through the jumplist (e.g. after gd), easier to reach
+-- than <C-o>/<C-i>
+vim.keymap.set("n", "<leader>o", "<C-o>")
+vim.keymap.set("n", "<leader>i", "<C-i>")
+
+-- Pop back up the tag stack (e.g. after chaining several gd's)
+vim.keymap.set("n", "<leader>t", "<C-t>")

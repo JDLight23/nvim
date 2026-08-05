@@ -24,3 +24,8 @@
 - `<leader>hp` - preview hunk (small git diff)
 - `<leader>hs` - stage JUST that hunk
 - `<leader>hu` - undo stage hunk
+
+### Other
+- `<leader>o` - jump back through jumplist (e.g. after `gd`)
+- `<leader>i` - jump forward through jumplist
+- `<leader>t` - Pop back up tag stack (e.g. after several `gd`'s)
