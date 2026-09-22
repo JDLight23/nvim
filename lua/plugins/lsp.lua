@@ -25,6 +25,17 @@ return {
                 capabilities = require("blink.cmp").get_lsp_capabilities(),
             })
 
+            -- Configure clangd explicitly with query-driver flags
+            vim.lsp.config("clangd", {
+                cmd = {
+                    "clangd",
+                    "--background-index",
+                    "--clang-tidy",
+                    -- Allows clangd to query system compilers for system headers
+                    "--query-driver=/usr/bin/g++,/usr/bin/clang++,/usr/bin/c++,/usr/bin/xcrun,**/clang++"
+                }
+            })
+
             vim.lsp.enable({ "clangd", "pyright", "robotframework_ls", "groovyls" })
 
             vim.api.nvim_create_autocmd("LspAttach", {
