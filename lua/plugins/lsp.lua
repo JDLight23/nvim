@@ -5,7 +5,7 @@ return {
             require("mason").setup()
             local mr = require("mason-registry")
             mr.refresh(function()
-                for _, pkg_name in ipairs({ "clangd", "pyright", "robotframework-lsp", "groovy-language-server" }) do
+                for _, pkg_name in ipairs({ "clangd", "pyright", "robotframework-lsp", "groovy-language-server", "rust-analyzer" }) do
                     local ok, pkg = pcall(mr.get_package, pkg_name)
                     if ok and not pkg:is_installed() then
                         pkg:install()
@@ -36,7 +36,7 @@ return {
                 }
             })
 
-            vim.lsp.enable({ "clangd", "pyright", "robotframework_ls", "groovyls" })
+            vim.lsp.enable({ "clangd", "pyright", "robotframework_ls", "groovyls", "rust_analyzer" })
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 callback = function(ev)
